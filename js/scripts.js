@@ -1,56 +1,48 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Smooth Scroll Navigation
     const links = document.querySelectorAll('nav ul li a');
-
-    for (const link of links) {
+    links.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = link.getAttribute('href');
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.querySelector('form');
-    form.addEventListener('submit', function(event) {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        if (!name || !email || !message) {
-            event.preventDefault();
-            alert('Veuillez remplir tous les champs du formulaire.');
-        }
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('img');
-    for (const img of images) {
-        img.addEventListener('click', function() {
-            if (img.classList.contains('enlarged')) {
-                img.classList.remove('enlarged');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
             } else {
-                img.classList.add('enlarged');
+                console.error(`Element with id ${targetId} not found.`);
             }
         });
+    });
+
+    // Formulaire de Contact avec Validation
+    const form = document.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !message) {
+                event.preventDefault();
+                alert('Veuillez remplir tous les champs du formulaire.');
+            }
+        });
+    } else {
+        console.error('Form element not found.');
     }
-});
 
-// Ajoute ce CSS à ton fichier styles.css
-/*
-img.enlarged {
-    width: 100%;
-    height: auto;
-    transition: width 0.3s ease;
-}
-*/
+    // Galerie d'Images
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            img.classList.toggle('enlarged');
+        });
+    });
 
-document.addEventListener('DOMContentLoaded', function() {
+    // Révélation des Éléments au Défilement
     const sections = document.querySelectorAll('section');
-
     window.addEventListener('scroll', function() {
         const triggerBottom = window.innerHeight / 5 * 4;
         sections.forEach(section => {
@@ -63,17 +55,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-// Ajoute ce CSS à ton fichier styles.css
-/*
-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-section.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-*/

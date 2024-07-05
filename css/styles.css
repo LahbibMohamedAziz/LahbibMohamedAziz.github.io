@@ -40,3 +40,21 @@ footer {
     width: 100%;
     bottom: 0;
 }
+/* Agrandir les images */
+img.enlarged {
+    width: 100%;
+    height: auto;
+    transition: width 0.3s ease;
+}
+
+/* Révélation des éléments au défilement */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
