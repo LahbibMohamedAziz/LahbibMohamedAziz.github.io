@@ -1,61 +1,98 @@
-body {
-    font-family: Arial, sans-serif;
+/* Réinitialisation et styles généraux */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 header {
-    background: #333;
+    background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
     text-align: center;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    margin-top: 10px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    display: inline-block;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
-main {
-    padding: 20px;
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 50px 0;
+}
+
+section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section p {
+    text-align: center;
+    color: #666;
 }
 
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
+    background-color: #333;
     color: #fff;
-    position: fixed;
-    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    position: absolute;
     bottom: 0;
-}
-
-/* Agrandir les images */
-img.enlarged {
     width: 100%;
-    height: auto;
-    transition: width 0.3s ease;
 }
 
-/* Révélation des éléments au défilement */
-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+footer p {
+    font-size: 0.8rem;
 }
 
-section.show {
-    opacity: 1;
-    transform: translateY(0);
+/* Styles spécifiques pour chaque section */
+#hero {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#about, #projects, #contact {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 50px 0;
 }
