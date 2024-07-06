@@ -56,3 +56,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const currentLocation = location.pathname;
+    const navLinks = document.querySelectorAll('header nav ul li a');
+
+    navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentLocation) {
+            link.classList.add('active');
+        }
+    });
+
+    // JavaScript pour des interactions supplémentaires sur la page des projets peut être ajouté ici
+});
