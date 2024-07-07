@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Ajout de styles spécifiques pour la page d'accueil */
+        body.home main {
+            min-height: calc(100vh - 266px); /* Ajustez cette valeur en fonction de la hauteur de votre header et footer */
+        }
+    </style>
 </head>
 <body class="home">
     <header>
@@ -21,41 +27,43 @@
         </div>
     </header>
 
-    <section id="hero">
-        <div class="container">
-            <h2>Développeur Web Passionné</h2>
-            <p>Bienvenue sur mon portfolio ! Découvrez mes projets et mon expérience.</p>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2>À propos de moi</h2>
-            <p>Ici, vous trouverez des informations sur mon parcours et mes compétences.</p>
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <h2>Mes Projets</h2>
-            <div class="project">
-                <h3>Nom du Projet 1</h3>
-                <p>Description brève du projet.</p>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Développeur Web Passionné</h2>
+                <p>Bienvenue sur mon portfolio ! Découvrez mes projets et mon expérience.</p>
             </div>
-            <div class="project">
-                <h3>Nom du Projet 2</h3>
-                <p>Description brève du projet.</p>
-            </div>
-            <!-- Ajoute d'autres projets ici -->
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-         <div class="container">
-            <h2>Contactez-moi</h2>
-            <p>N'hésitez pas à me contacter pour discuter de projets ou pour toute question.</p>
-        </div>
-    </section>
+        <section id="about">
+            <div class="container">
+                <h2>À propos de moi</h2>
+                <p>Ici, vous trouverez des informations sur mon parcours et mes compétences.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Mes Projets</h2>
+                <div class="project">
+                    <h3>Nom du Projet 1</h3>
+                    <p>Description brève du projet.</p>
+                </div>
+                <div class="project">
+                    <h3>Nom du Projet 2</h3>
+                    <p>Description brève du projet.</p>
+                </div>
+                <!-- Ajoutez d'autres projets ici -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Contactez-moi</h2>
+                <p>N'hésitez pas à me contacter pour discuter de projets ou pour toute question.</p>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
