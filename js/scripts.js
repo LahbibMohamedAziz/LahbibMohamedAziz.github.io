@@ -82,3 +82,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // JavaScript pour des interactions supplémentaires sur la page À propos peut être ajouté ici
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Animation sur les cartes de projet
+    const projectCards = document.querySelectorAll('.project-card');
+
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+
+        card.addEventListener('click', function() {
+            const description = this.querySelector('.project-info p');
+            if (description.style.display === 'block') {
+                description.style.display = 'none';
+            } else {
+                description.style.display = 'block';
+            }
+        });
+    });
+
+    // Animation sur la photo de profil
+    const profilePic = document.querySelector('.profile-pic img');
+
+    profilePic.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.1)';
+        this.style.transition = 'transform 0.3s ease';
+    });
+
+    profilePic.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
+    });
+
+    // Défilement des compétences
+    const skills = document.querySelectorAll('.about-text ul li');
+    let currentSkillIndex = 0;
+
+    function showNextSkill() {
+        skills[currentSkillIndex].style.display = 'none';
+        currentSkillIndex = (currentSkillIndex + 1) % skills.length;
+        skills[currentSkillIndex].style.display = 'block';
+    }
+
+    setInterval(showNextSkill, 2000);
+});

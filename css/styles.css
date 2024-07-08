@@ -357,3 +357,31 @@ nav ul li a {
 nav ul li a:hover {
     color: #ddd;
 }
+
+/* Ajout d'animations au survol des cartes de projet */
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Affichage de la description détaillée au clic */
+.project-info p {
+    display: none;
+}
+
+/* Animation au survol de la photo de profil */
+.profile-pic img {
+    transition: transform 0.3s ease;
+}
+
+/* Défilement des compétences */
+.about-text ul li {
+    display: none;
+}
+
+.about-text ul li:first-child {
+    display: block;
+}
