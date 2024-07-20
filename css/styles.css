@@ -389,7 +389,7 @@ nav ul li a:hover {
 .hidden {
     display: none;
 }
-/* Styles de base (pour les grands écrans) */
+/* Styles de base */
 .container {
     padding: 0 20px;
 }
@@ -458,6 +458,8 @@ header nav ul li {
         font-size: 0.9em;
     }
 }
+
+/* Réglage des images */
 img {
     max-width: 100%;
     height: auto;
@@ -466,6 +468,7 @@ img {
 .project-card {
     width: 100%; /* Assure que les cartes de projets sont adaptables */
 }
+
 .container {
     width: 100%;
     padding: 0 5%;
@@ -474,6 +477,7 @@ img {
 header, footer {
     padding: 10px 5%;
 }
+
 /* Menu burger pour petits écrans */
 .menu-burger {
     display: none;
@@ -483,60 +487,18 @@ header, footer {
     .menu-burger {
         display: block;
         cursor: pointer;
+        font-size: 1.5em;
     }
 
-    header nav ul {
-        display: none;
-        flex-direction: column;
-    }
-
-    header nav ul.show {
-        display: flex;
-    }
-}
-/* Styles généraux */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.menu-burger {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-/* Menu déroulant pour petits écrans */
-@media (max-width: 768px) {
     header nav ul {
         display: none;
         flex-direction: column;
         width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Ajuste selon la hauteur de ton header */
+        left: 0;
+        z-index: 1000;
     }
 
     header nav ul.show {
@@ -547,8 +509,5 @@ header nav ul li a {
         margin: 10px 0;
         text-align: center;
     }
-
-    .menu-burger {
-        display: block;
-    }
 }
+
