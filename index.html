@@ -3,14 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon site personnel - LAHBIB Mohamed Aziz</title>
+    <title>Accueil - Mon site personnel - LAHBIB Mohamed Aziz</title>
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* Ajout de styles spécifiques pour la page d'accueil */
-        body.home main {
-            min-height: calc(100vh - 266px); /* Ajustez cette valeur en fonction de la hauteur de votre header et footer */
-        }
-    </style>
 </head>
 <body class="home">
     <header>
@@ -18,7 +12,7 @@
             <h1>Bienvenue sur mon portfolio</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html" class="active">Accueil</a></li>
                     <li><a href="about.html">À propos</a></li>
                     <li><a href="projects.html">Projets</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -28,50 +22,32 @@
     </header>
 
     <main>
-        <section id="hero">
-            <div class="container">
-                <h2>Développeur Web Passionné</h2>
-                <p>Bienvenue sur mon portfolio ! Découvrez mes projets et mon expérience.</p>
-            </div>
-        </section>
-
         <section id="about">
             <div class="container">
-                <h2>À propos de moi</h2>
-                <p>Ici, vous trouverez des informations sur mon parcours et mes compétences.</p>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2>Mes Projets</h2>
-                <div class="project">
-                    <h3>Nom du Projet 1</h3>
-                    <p>Description brève du projet.</p>
+                <div class="about-content">
+                    <div class="profile-pic">
+                        <img src="images/photo-profil.jpg" alt="Photo de profil de Mohamed Aziz LAHBIB">
+                    </div>
+                    <div class="about-text">
+                        <h2>À propos de moi</h2>
+                        <p>Je suis Mohamed Aziz LAHBIB, étudiant en informatique avec une passion pour le développement web et les technologies innovantes.</p>
+                        <ul>
+                            <li>Compétence 1</li>
+                            <li>Compétence 2</li>
+                            <li>Compétence 3</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="project">
-                    <h3>Nom du Projet 2</h3>
-                    <p>Description brève du projet.</p>
-                </div>
-                <!-- Ajoutez d'autres projets ici -->
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container">
-                <h2>Contactez-moi</h2>
-                <p>N'hésitez pas à me contacter pour discuter de projets ou pour toute question.</p>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 lahbib@</p>
+            <p>&copy; 2024 Mohamed Aziz LAHBIB</p>
         </div>
     </footer>
 
     <script src="js/scripts.js"></script>
 </body>
 </html>
-
