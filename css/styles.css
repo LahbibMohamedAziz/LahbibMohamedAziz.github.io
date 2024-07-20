@@ -389,3 +389,108 @@ nav ul li a:hover {
 .hidden {
     display: none;
 }
+/* Styles de base (pour les grands écrans) */
+.container {
+    padding: 0 20px;
+}
+
+header {
+    padding: 20px 0;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+/* Pour les écrans moyens (tablettes) */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .profile-pic {
+        max-width: 150px;
+        margin: 0 auto 20px;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+}
+
+/* Pour les petits écrans (smartphones) */
+@media (max-width: 480px) {
+    header nav ul {
+        font-size: 1em;
+    }
+
+    .profile-pic {
+        max-width: 120px;
+    }
+
+    .about-text {
+        font-size: 0.9em;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.9em;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9em;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-card {
+    width: 100%; /* Assure que les cartes de projets sont adaptables */
+}
+.container {
+    width: 100%;
+    padding: 0 5%;
+}
+
+header, footer {
+    padding: 10px 5%;
+}
+/* Menu burger pour petits écrans */
+.menu-burger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+}
