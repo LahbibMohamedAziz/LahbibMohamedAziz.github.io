@@ -385,3 +385,7 @@ nav ul li a:hover {
 .about-text ul li:first-child {
     display: block;
 }
+
+.hidden {
+    display: none;
+}

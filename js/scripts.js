@@ -131,3 +131,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setInterval(showNextSkill, 2000);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Fonction pour afficher les informations
+    function showInfo(infoId) {
+        const allInfos = document.querySelectorAll('#contact-info p');
+        allInfos.forEach(info => info.classList.add('hidden'));
+
+        const infoToShow = document.getElementById(infoId);
+        if (infoToShow) {
+            infoToShow.classList.remove('hidden');
+        }
+    }
+
+    document.getElementById('show-phone').addEventListener('click', function(event) {
+        event.preventDefault();
+        showInfo('phone-info');
+    });
+
+    document.getElementById('show-email').addEventListener('click', function(event) {
+        event.preventDefault();
+        showInfo('email-info');
+    });
+
+    document.getElementById('show-linkedin').addEventListener('click', function(event) {
+        event.preventDefault();
+        showInfo('linkedin-info');
+    });
+});
