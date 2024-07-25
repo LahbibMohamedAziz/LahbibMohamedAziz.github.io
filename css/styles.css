@@ -260,11 +260,6 @@ main {
     flex: 1;
 }
 
-/* CSS pour la page d'accueil */
-body.home main {
-    min-height: calc(100vh - 266px); /* Ajustez cette valeur en fonction de la hauteur de votre header et footer */
-}
-
 /* Styles généraux */
 * {
     margin: 0;
