@@ -169,4 +169,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBurger = document.querySelector('.menu-burger');
+    const navLinks = document.querySelector('header nav ul');
+
+    menuBurger.addEventListener('click', function() {
+        navLinks.classList.toggle('show');
+    });
+});
 
