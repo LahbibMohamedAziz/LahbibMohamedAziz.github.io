@@ -735,33 +735,53 @@ main {
     padding: 20px 0;
 }
 
-/* Hero Section */
-.hero {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    color: #060606;
-    text-align: center;
-    padding: 100px 0;
-}
-
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.5em;
-}
-
 /* About Section */
 .about {
     padding: 50px 0;
 }
 
+/* Ajout d'une animation de zoom au survol */
 .about img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about img:hover {
+    transform: scale(1.05);
+}
+
+/* Effet de flou avec du texte superposé */
+.about {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.about .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Animation de l'apparition de l'image */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.about img {
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* Services Section */
