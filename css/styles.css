@@ -838,7 +838,7 @@ footer {
     width: 100%;
 }
 /* Ajoutez ce style dans votre fichier CSS */
-footer {
+footer .Copyright {
     position: fixed;
     bottom: 0;
     width: 100%;
