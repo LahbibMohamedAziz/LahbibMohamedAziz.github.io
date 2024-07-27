@@ -5,46 +5,144 @@
     box-sizing: border-box;
 }
 
-/* Styles généraux */
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 0px;
+    padding: 0 20px;
 }
 
+/* Header */
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
 header nav ul {
-    list-style-type: none;
     display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
 header nav ul li {
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
 }
 
+header nav ul li a:hover {
+    color: #ddd;
+}
+
+.menu-burger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    header nav ul.show {
+        display: flex;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-burger {
+        display: block;
+    }
+}
+
+/* Main */
 main {
     padding: 20px 0;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 0px 0;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-/* Styles pour le formulaire de contact */
+/* About Section */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-pic {
+    flex: 1 1 200px;
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.profile-pic img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    flex: 3 1 400px;
+}
+
+.about-text p {
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-text ul li {
+    background: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-left: 4px solid #333;
+}
+
+/* Contact Section */
 form {
     max-width: 600px;
     margin: 0 auto;
@@ -86,7 +184,7 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Styles pour la section des projets */
+/* Project Section */
 .project-card {
     background-color: #fff;
     border-radius: 10px;
@@ -114,6 +212,7 @@ button[type="submit"]:hover {
 .project-info p {
     margin: 10px 0 0;
     color: #555;
+    display: none;
 }
 
 .project-card:hover {
@@ -121,133 +220,13 @@ button[type="submit"]:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Styles généraux */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 0px;
-}
-
-header, footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1, footer p {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ddd;
-}
-
-/* Styles pour la section À propos */
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.profile-pic {
-    flex: 1 1 200px;
-    max-width: 200px;
-    margin-right: 20px;
-}
-
-.profile-pic img {
-    width: 100%;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.about-text {
-    flex: 3 1 400px;
-}
-
-.about-text p {
-    margin: 10px 0;
-    line-height: 1.6;
-    color: #333;
-}
-
-.about-text ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.about-text ul li {
-    background: #f9f9f9;
-    margin: 5px 0;
-    padding: 10px;
-    border-left: 4px solid #333;
-}
-
-/* Styles généraux */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header, footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1, footer p {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ddd;
+.project-card:hover .project-info p {
+    display: block;
 }
 
 /* Ensure the footer stays at the bottom of the page */
 html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 body {
@@ -260,154 +239,7 @@ main {
     flex: 1;
 }
 
-/* CSS pour la page d'accueil */
-body.home main {
-    min-height: calc(100vh - 266px); /* Ajustez cette valeur en fonction de la hauteur de votre header et footer */
-}
-
-/* Styles généraux */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1, footer p {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ddd;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-/* Existing styles */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header, footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1, footer p {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #ddd;
-}
-
-/* Ajout d'animations au survol des cartes de projet */
-.project-card {
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-/* Affichage de la description détaillée au clic */
-.project-info p {
-    display: none;
-}
-
-/* Animation au survol de la photo de profil */
-.profile-pic img {
-    transition: transform 0.3s ease;
-}
-
-/* Défilement des compétences */
-.about-text ul li {
-    display: none;
-}
-
-.about-text ul li:first-child {
-    display: block;
-}
-
-.hidden {
-    display: none;
-}
-/* Styles de base */
-.container {
-    padding: 0 20px;
-}
-
-header {
-    padding: 20px 0;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-/* Pour les écrans moyens (tablettes) */
+/* Media Queries */
 @media (max-width: 768px) {
     header nav ul {
         flex-direction: column;
@@ -435,7 +267,6 @@ header nav ul li {
     }
 }
 
-/* Pour les petits écrans (smartphones) */
 @media (max-width: 480px) {
     header nav ul {
         font-size: 1em;
@@ -457,383 +288,18 @@ header nav ul li {
     button[type="submit"] {
         font-size: 0.9em;
     }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
 }
 
-/* Réglage des images */
+/* Reset images */
 img {
     max-width: 100%;
     height: auto;
-}
-
-.project-card {
-    width: 100%; /* Assure que les cartes de projets sont adaptables */
-}
-
-.container {
-    width: 100%;
-    padding: 0 5%;
-}
-
-header, footer {
-    padding: 10px 5%;
-}
-
-/* Menu burger pour petits écrans */
-.menu-burger {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .menu-burger {
-        display: block;
-        cursor: pointer;
-        font-size: 1.5em;
-    }
-
-    header nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px; /* Ajuste selon la hauteur de ton header */
-        left: 0;
-        z-index: 1000;
-    }
-
-    header nav ul.show {
-        display: flex;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-}
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.menu-burger {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    header nav ul.show {
-        display: flex;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .menu-burger {
-        display: block;
-    }
-}
-
-/* Main */
-main {
-    padding: 20px 0;
-}
-
-/* Hero Section */
-.hero {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 0;
-}
-
-.hero h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.5em;
-}
-
-/* About Section */
-.about {
-    padding: 50px 0;
-}
-
-.about img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-/* Services Section */
-.services {
-    background: #f4f4f4;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.service {
-    margin: 20px 0;
-}
-
-.service .icon {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-/* Testimonials Section */
-.testimonials {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.testimonial {
-    margin: 20px 0;
-    font-style: italic;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1.2em;
-    }
-}
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-.menu-burger {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    header nav ul.show {
-        display: flex;
-    }
-
-    header nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .menu-burger {
-        display: block;
-    }
-}
-
-/* Main */
-main {
-    padding: 20px 0;
-}
-
-/* About Section */
-.about {
-    padding: 50px 0;
-}
-
-/* Ajout d'une animation de zoom au survol */
-.about img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 20px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.about img:hover {
-    transform: scale(1.05);
-}
-
-/* Effet de flou avec du texte superposé */
-.about {
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.about .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-/* Animation de l'apparition de l'image */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.about img {
-    animation: fadeIn 2s ease-in-out;
-}
-
-/* Services Section */
-.services {
-    background: #f4f4f4;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.service {
-    margin: 20px 0;
-}
-
-.service .icon {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-/* Testimonials Section */
-.testimonials {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.testimonial {
-    margin: 20px 0;
-    font-style: italic;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1.2em;
-    }
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
