@@ -837,3 +837,17 @@ footer {
     bottom: 0;
     width: 100%;
 }
+/* Ajoutez ce style dans votre fichier CSS */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+footer .copyright {
+    font-size: 14px;
+}
